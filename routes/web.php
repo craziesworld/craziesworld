@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// 前台路由组
+Route::group([], function () {
+    Route::get('/', 'Home\HomePageController@getIndex');
+});
+
+// 权限路由组
+Auth::routes();
+
+// 后台路由组
+Route::group([], function () {
+    Route::get('/admin', 'Admin\DashboardController@index');
 });

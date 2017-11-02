@@ -11,5 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+// 前台资源
+mix.js('resources/assets/home/js/app.js', 'assets/home/js')
+    .sass('resources/assets/home/sass/app.scss', 'assets/home/css')
+    .version();
+
+// 后台资源
+mix.js('resources/assets/admin/js/app.js', 'assets/admin/js')
+    .sass('resources/assets/admin/sass/app.scss', 'assets/admin/css')
+    .version();
