@@ -22,4 +22,6 @@ Auth::routes();
 // 后台路由组
 Route::group([], function () {
     Route::get('/admin', 'Admin\DashboardController@index');
+    Route::apiResource('/admin/content/notebook', 'Admin\Content\NotebookController');
+
 });

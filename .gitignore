@@ -14,3 +14,4 @@ _ide_helper.php
 after.sh
 aliases
 Vagrantfile
+package-lock.json

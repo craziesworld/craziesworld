@@ -5,6 +5,12 @@ namespace App\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * @property integer id
+ * @property string name
+ * @property string email
+ * @property string password
+ */
 class User extends Authenticatable
 {
     use Notifiable;
@@ -26,4 +32,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function articles()
+    {
+        return $this->hasMany('App\Model\Article');
+    }
 }
