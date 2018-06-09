@@ -18,14 +18,16 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->boolean('is_enable')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
-        $user = new \App\Model\User();
-        $user->name = 'admin';
-        $user->email = 'admin@local.com';
-        $user->password = Hash::make('admin');
-        $user->save();
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'email' => 'admin@local.com',
+            'password' => Hash::make('admin'),
+            'is_enable' => 1,
+        ]);
     }
 
     /**
