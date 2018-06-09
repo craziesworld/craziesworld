@@ -1,9 +1,60 @@
+html, body, #app, .el-container {
+  height: 100%;
+}
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+* {
+  padding: 0;
+  margin: 0;
+}
 
-// Variables
-@import "variables";
+.el-header {
+  background-color: #B3C0D1 !important;
+  height: 48px !important;
+  color: #333 !important;
+  line-height: 48px !important;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif !important;
 
-// Bootstrap
-@import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+}
+
+.el-aside {
+  width: 200px !important;
+  color: #333 !important;
+  background-color: rgb(238, 241, 246) !important;
+}
+
+.el-footer {
+  padding: 15px !important;
+  border-top: 1px solid #d2d6de !important;
+  background: #fff !important;
+  color: #444 !important;
+  height: 51px !important;
+}
+
+.logo {
+  float: left;
+  display: block;
+  width: 180px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  background: #357ca5;
+  color: #FFF;
+}
+
+.navbar-static-top {
+  background-color: #3c8dbc;
+  position: relative;
+  margin-left: 180px;
+}
+.navbar-static-top .el-dropdown i {
+  padding: 10px !important;
+}
+.navbar-static-top .el-dropdown {
+  color: #FFFFFF !important;
+  font-size: 18px !important;
+  width: 48px !important;
+  text-align: center !important;
+}
+.navbar-static-top .el-dropdown:hover {
+  background: #357ca5 !important;
+}
