@@ -15,8 +15,8 @@ class CreateArticleKeywordTable extends Migration
     {
         Schema::create('article_keyword', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('article_id');
-            $table->unsignedBigInteger('keyword_id');
+            $table->unsignedBigInteger('article_id')->index();
+            $table->unsignedBigInteger('keyword_id')->index();
             $table->timestamps();
         });
     }

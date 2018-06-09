@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->unsignedBigInteger('visit')->default(0);
-            $table->unsignedBigInteger('article_content_id');
+            $table->unsignedBigInteger('article_content_id')->unique();
             $table->unsignedBigInteger('notebook_id');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
